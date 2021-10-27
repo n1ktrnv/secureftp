@@ -25,6 +25,7 @@ class TXTLogger(Logger):
         self._filename = Path(filename).resolve()
         if filename is not None and not os.path.isfile(filename):
             self.clear()
+        self._filename = Path(filename).resolve()
 
     @property
     def filename(self):
